@@ -1,0 +1,13 @@
+/*
+ * @Author: andy
+ * @Email: andy.li@jingdigital.com
+ * @Date: 2023-12-12 21:21:35
+ * @Description: .
+ */
+import { Context } from 'koa'
+class IndexController {
+  async index(ctx: Context) {
+    ctx.body = [1, 2, 3, 4, 5]
+  }
+}
+export default new IndexController
