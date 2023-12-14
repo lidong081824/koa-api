@@ -5,5 +5,6 @@
  * @Description: .
  */
 import run from './app'
-
-run('8080')
+import config from './app/config'
+console.log(config)
+run(config.server.port)
