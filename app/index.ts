@@ -4,14 +4,16 @@
  * @Date: 2023-12-12 21:21:50
  * @Description: .
  */
-import Koa from 'koa'
+import Koa, { Context, Next } from 'koa'
 import router from './router'
 import { Server } from 'http'
-import AccessLogMiddleware from './middleware/accessLogMiddleware'
+import AccessLogMiddleware from './middleware/AccessLogMiddleware'
+import ErrorHandleMiddleware from './middleware/ErrorHandleMiddleware'
 
 const app = new Koa
 
 app
+  .use(ErrorHandleMiddleware)
   .use(AccessLogMiddleware)
   .use(router.routes())
 

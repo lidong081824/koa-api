@@ -8,9 +8,11 @@ import dotenv from "dotenv"
 dotenv.config()
 import koaRouter from 'koa-router'
 import IndexController from '../controller'
+import IndexController2 from "../controller/index2"
 
 const router = new koaRouter({ prefix: '/admin' })
 
-router.get('/', IndexController.index)
+router.get('/', IndexController)
+router.get('/list', IndexController2)
 
 export default router
