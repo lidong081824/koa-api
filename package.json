@@ -15,7 +15,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-comment": "yarn test"
+      "pre-commit": "yarn test"
     }
   },
   "keywords": [
