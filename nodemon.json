@@ -1,7 +1,6 @@
 {
   "watch": [
     "app/**/*.ts",
-    "utils/**/*.ts",
     "./index.ts"
   ],
   "ignore": [

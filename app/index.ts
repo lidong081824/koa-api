@@ -1,22 +1,23 @@
 /*
  * @Author: andy
  * @Email: andy.li@jingdigital.com
- * @Date: 2023-12-12 21:21:50
- * @Description: .
+ * @Date: 2023-12-18 10:15:40
+ * @Description: app文件
  */
-import Koa, { Context, Next } from 'koa'
-import router from './router'
+import koa from 'koa'
 import { Server } from 'http'
+import router from './router'
 import AccessLogMiddleware from './middleware/AccessLogMiddleware'
-import ErrorHandleMiddleware from './middleware/ErrorHandleMiddleware'
+import ErrorHandlingMiddleware from './middleware/ErrorHandlingMiddleware'
 
-const app = new Koa
+const app = new koa()
 
 app
-  .use(ErrorHandleMiddleware)
+  .use(ErrorHandlingMiddleware)
   .use(AccessLogMiddleware)
   .use(router.routes())
-
+  
+// 服务启动方法
 const run = (port: string | number): Server => {
   return app.listen(port)
 }

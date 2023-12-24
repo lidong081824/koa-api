@@ -1,0 +1,4 @@
+[2023-12-24T10:44:40.909] [INFO] access - --path=/api --method=GET --UA=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+[2023-12-24T10:44:42.053] [INFO] access - --path=/api/ --method=GET --UA=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+[2023-12-24T10:44:42.935] [INFO] access - --path=/api/demo --method=GET --UA=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+[2023-12-24T10:44:43.574] [INFO] access - --path=/favicon.ico --method=GET --UA=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36

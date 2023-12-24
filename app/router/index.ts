@@ -1,18 +1,23 @@
 /*
  * @Author: andy
  * @Email: andy.li@jingdigital.com
- * @Date: 2023-12-12 21:22:12
+ * @Date: 2023-12-18 10:17:21
  * @Description: 路由文件
  */
 import dotenv from "dotenv"
-dotenv.config()
 import koaRouter from 'koa-router'
-import IndexController from '../controller'
-import IndexController2 from "../controller/index2"
+import DemoRouter from "./components/DemoRouter"
+import IndexRouter from "./components/IndexRouter"
 
-const router = new koaRouter({ prefix: '/admin' })
+// 加载各环境的配置文件
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
 
-router.get('/', IndexController)
-router.get('/list', IndexController2)
+console.log(`当前服务器环境：${process.env.NODE_ENV}`)
+console.log(`当前开发环境端口：${process.env.SERVER_PORT}`)
+// 服务请求前缀
+const router = new koaRouter({ prefix: '/api' })
+
+DemoRouter(router)
+IndexRouter(router)
 
 export default router
