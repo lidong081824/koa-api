@@ -9,7 +9,11 @@ import { Context, Next } from "koa"
 
 const DemoController = (ctx: Context, next: Next) => {
   JSON.parse('{a=1}')
-  ctx.body = 'DemoController'
+  ctx.body = {
+    code: 0,
+    data: 'DemoController',
+  }
+  ctx.headers["content-type"] = 'application/json'
   return next()
 }
 export default DemoController

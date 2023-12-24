@@ -1,0 +1,4 @@
+[2023-12-24T20:01:13.791] [INFO] access - --path=/api --method=GET --UA=undefined
+[2023-12-24T20:01:13.802] [INFO] access - --path=/api/demo --method=GET --UA=undefined
+[2023-12-24T20:02:08.480] [INFO] access - --path=/api --method=GET --UA=undefined
+[2023-12-24T20:02:08.491] [INFO] access - --path=/api/demo --method=GET --UA=undefined

@@ -9,13 +9,13 @@
     "staging": "cross-env NODE_ENV=staging nodemon",
     "live": "cross-env NODE_ENV=live nodemon",
     "autoBuild:dev": "yarn jest && cross-env NODE_ENV=dev rollup -c",
-    "autoBuild:staging": "cross-env NODE_ENV=staging rollup -c",
-    "autoBuild:master": "cross-env NODE_ENV=live rollup -c",
+    "autoBuild:staging": "yarn jest && cross-env NODE_ENV=staging rollup -c",
+    "autoBuild:master": "yarn jest && cross-env NODE_ENV=live rollup -c",
     "test": "NODE_ENV=dev jest"
   },
   "husky": {
     "hooks": {
-      "pre-comment": "yarn run test"
+      "pre-comment": "yarn test"
     }
   },
   "keywords": [

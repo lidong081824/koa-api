@@ -24,6 +24,16 @@ describe('bff jest', () => {
         data: expect.any(String),
       });
   })
+  it('/demo', async () => {
+    const res = await request(server)
+      .get('/api/demo')
+      .expect(200);
+    expect(res.body)
+      .toMatchObject({
+        code: expect.any(Number),
+        data: expect.any(String),
+      });
+  })
   afterAll(async () => {
     server.close()
   })
